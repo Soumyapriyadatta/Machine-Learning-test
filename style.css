@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'pacifico', cursive;
+    line-height: 1.6;
+}
+
+.container {
+    width: 100%;
+    background-image: url(bg_img.png);
+    background-size: cover;
+    background-position: center;
+    padding: 20px 10px;
+    min-height: 125vh;
+}
+
+.todo-app {
+    width: 100%;
+    max-width: 540px;
+    background-color:snow;
+    margin: 100px auto 40px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.todo-app h2 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 20px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+}
+
+input {
+    flex: 1;
+    border: none;
+    outline-color: gray;
+    background: transparent;
+    padding: 10px;
+    font-weight: 14px;
+    font-size: 16px;
+}
+
+button {
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background: #83c5f7;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+    border-radius: 40px;
+}
+
+ul li {
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    left: 8px;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-image: url(unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+}
+
+ul li.checked {
+    color: gray;
+    text-decoration: line-through;
+}
+
+ul li.checked::before {
+    background-image: url(checked.png);
+}
+
+ul li span {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #3d3c3c;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%; ;
+}
+
+ul li span:hover {
+    background: gray;
+    color: white;
+    border-radius: 50%;
+    cursor: pointer;
+}
